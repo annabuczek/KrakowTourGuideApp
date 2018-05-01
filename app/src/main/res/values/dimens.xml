@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Launching Activity Dimens-->
+    <dimen name="launch_ac_margin_horizontal">32dp</dimen>
+    <dimen name="launch_ac_margin_horizontal_large">48dp</dimen>
+    <dimen name="launch_ac_text_padding">8dp</dimen>
+    <dimen name="launch_ac_text_padding_large">16dp</dimen>
+</resources>

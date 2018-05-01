@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/krakow_phone_land"
+    tools:context="com.example.android.krakowtourguideapp.LaunchActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/launch_ac_horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <LinearLayout
+        style="@style/TextContainerStyle"
+        android:id="@+id/launch_ac_text_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/launch_ac_horizontal_guideline"
+        app:layout_constraintBottom_toTopOf="@id/launch_ac_button"
+        >
+        <TextView
+            android:id="@+id/launch_ac_header_text_view"
+            style="@style/TextViewHeadingStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/launch_activity_heading"/>
+
+
+        <TextView
+            android:id="@+id/launch_ac_body_text_view"
+            style="@style/TextViewBodyStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/launch_activity_body"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/launch_ac_button"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/launch_activity_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/launch_ac_text_container"/>
+</android.support.constraint.ConstraintLayout>

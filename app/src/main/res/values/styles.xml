@@ -1,11 +1,59 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--Launch Activity Style-->
+
+    <style name="TextContainerStyle">
+        <item name="android:layout_marginStart">@dimen/launch_ac_margin_horizontal</item>
+        <item name="android:layout_marginEnd">@dimen/launch_ac_margin_horizontal</item>
+        <item name="android:background">@color/colorTextContainer</item>
+    </style>
+
+    <style name="TextContainerStyleLarge" parent="TextContainerStyle">
+        <item name="android:layout_marginStart">@dimen/launch_ac_margin_horizontal_large</item>
+        <item name="android:layout_marginEnd">@dimen/launch_ac_margin_horizontal_large</item>
+    </style>
+
+    <style name="TextViewHeadingStyle">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/colorTextLight</item>
+        <item name="android:padding">@dimen/launch_ac_text_padding</item>
+    </style>
+
+    <style name="TextViewHeadingStyleLarge" parent="TextViewHeadingStyle">
+        <item name="android:textSize">45sp</item>
+        <item name="android:padding">@dimen/launch_ac_text_padding_large</item>
+    </style>
+
+    <style name="TextViewBodyStyle">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextLight</item>
+        <item name="android:padding">@dimen/launch_ac_text_padding</item>
+    </style>
+
+    <style name="TextViewBodyStyleLarge" parent="TextViewBodyStyle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:padding">@dimen/launch_ac_text_padding_large</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_marginStart">@dimen/launch_ac_margin_horizontal</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:paddingStart">@dimen/launch_ac_margin_horizontal</item>
+        <item name="android:paddingEnd">@dimen/launch_ac_margin_horizontal</item>
+        <item name="android:textColor">@color/colorTextPrimary</item>
+    </style>
+
+    <style name="ButtonStyleLarge" parent="ButtonStyle">
+        <item name="android:layout_marginStart">@dimen/launch_ac_margin_horizontal_large</item>
+    </style>
 </resources>

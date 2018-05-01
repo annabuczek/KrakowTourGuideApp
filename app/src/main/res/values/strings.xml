@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Krakow Tour Guide App</string>
+
+    <!--Launch Activity Strings-->
+    <string name="launch_activity_heading">Kraków Tour Guide</string>
+    <string name="launch_activity_body">Welcome in Kraków, the best city in the world, where I am living</string>
+    <string name="launch_activity_button">get started</string>
 </resources>
