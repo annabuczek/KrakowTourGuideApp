@@ -8,6 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!--Action Bar Theme-->
+    <style name="MyActionBarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/colorTextLight</item>
+    </style>
+
     <!--Launch Activity Style-->
 
     <style name="TextContainerStyle">
@@ -55,5 +60,20 @@
 
     <style name="ButtonStyleLarge" parent="ButtonStyle">
         <item name="android:layout_marginStart">@dimen/launch_ac_margin_horizontal_large</item>
+    </style>
+
+    <!---->
+
+    <!--Navigation Drawer Styles-->
+    <style name="NavigationDrawerHeaderStyle">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorTextLight</item>
+        <item name="android:paddingTop">@dimen/nav_drawer_view_padding</item>
+        <item name="android:paddingBottom">@dimen/nav_drawer_view_padding</item>
+    </style>
+
+    <style name="NavigationDrawerHeaderStyleLarge" parent="NavigationDrawerHeaderStyle">
+        <item name="android:textSize">20sp</item>
     </style>
 </resources>

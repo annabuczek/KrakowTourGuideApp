@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_item_1"
+            android:title="@string/nav_drawer_category_1" />
+        <item
+            android:id="@+id/nav_drawer_item_2"
+            android:title="@string/nav_drawer_category_2" />
+        <item
+            android:id="@+id/nav_drawer_item_3"
+            android:title="@string/nav_drawer_category_3" />
+        <item
+            android:id="@+id/nav_drawer_item_4"
+            android:title="@string/nav_drawer_category_4" />
+        <item
+            android:id="@+id/nav_drawer_item_5"
+            android:title="@string/nav_drawer_category_5" />
+    </group>
+        <item
+            android:title="@string/nav_drawer_sub_item">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item
+                    android:title="@string/nav_drawer_category_about"
+                    android:id="@+id/nav_drawer_item_6"/>
+
+                <item
+                    android:title="@string/nav_drawer_category_exit"
+                    android:id="@+id/nav_drawer_item_7"/>
+                </group>
+            </menu>
+        </item>
+
+</menu>
