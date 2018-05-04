@@ -9,10 +9,10 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.android.krakowtourguideapp.CategoryActivity">
 
-    <FrameLayout
-        android:id="@+id/category_fragments_content_frame"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/category_toolbar"
@@ -22,7 +22,13 @@
             android:elevation="4dp"
             android:theme="@style/MyActionBarTheme">
         </android.support.v7.widget.Toolbar>
-    </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/category_fragment_content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
 
     <android.support.design.widget.NavigationView
         android:id="@+id/category_navigation_drawer"

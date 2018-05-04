@@ -14,4 +14,8 @@
     <dimen name="nav_drawer_header_height_large">180dp</dimen>
     <dimen name="nav_drawer_margin_horizontal">16dp</dimen>
     <dimen name="nav_drawer_view_padding">8dp</dimen>
+
+    <!--Card View Dimens-->
+    <dimen name="card_view_padding_big">24dp</dimen>
+    <dimen name="card_view_padding_main">16dp</dimen>
 </resources>

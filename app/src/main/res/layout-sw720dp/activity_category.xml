@@ -9,7 +9,7 @@
     tools:context="com.example.android.krakowtourguideapp.CategoryActivity">
 
     <FrameLayout
-        android:id="@+id/category_fragments_content_frame"
+        android:id="@+id/category_fragment_content_frame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
