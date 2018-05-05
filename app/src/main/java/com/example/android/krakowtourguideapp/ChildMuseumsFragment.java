@@ -16,11 +16,11 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment extends Fragment {
+public class ChildMuseumsFragment extends Fragment {
 
     private AttractionAdapter attractionAdapter;
 
-    public EventsFragment() {
+    public ChildMuseumsFragment() {
         // Required empty public constructor
     }
 
@@ -29,16 +29,16 @@ public class EventsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> eventsList = new ArrayList<Attraction>();
+        ArrayList<Attraction> museumsList= new ArrayList<Attraction>();
 
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), eventsList);
+        attractionAdapter = new AttractionAdapter(getActivity(), museumsList);
 
     }
 

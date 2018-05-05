@@ -16,11 +16,11 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment extends Fragment {
+public class ChildClubsFragment extends Fragment {
 
     private AttractionAdapter attractionAdapter;
 
-    public EventsFragment() {
+    public ChildClubsFragment() {
         // Required empty public constructor
     }
 
@@ -29,18 +29,19 @@ public class EventsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> eventsList = new ArrayList<Attraction>();
+        ArrayList<Attraction> clubsList= new ArrayList<Attraction>();
 
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), eventsList);
+        attractionAdapter = new AttractionAdapter(getActivity(), clubsList);
 
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -52,10 +53,9 @@ public class EventsFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-//        Find List View within parent activity layout
+//          Find List View within parent activity layout
         ListView listView = view.findViewById(R.id.list_view);
 //        Set adapter to List View
         listView.setAdapter(attractionAdapter);
     }
-
 }

@@ -96,4 +96,19 @@
         <item name="android:paddingEnd">@dimen/card_view_padding_main</item>
     </style>
 
+    <style name="FavouriteImageViewStyle">
+        <item name="android:paddingTop">@dimen/card_view_padding_big</item>
+        <item name="android:paddingBottom">@dimen/card_view_padding_main</item>
+    </style>
+
+    <!--Tabs Style-->
+    <style name="TabsStyle" parent="Widget.Design.TabLayout">
+        <item name="tabBackground">@color/colorPrimary</item>
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabGravity">fill</item>
+
+    </style>
 </resources>

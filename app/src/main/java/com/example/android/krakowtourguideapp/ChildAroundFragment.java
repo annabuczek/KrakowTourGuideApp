@@ -16,11 +16,11 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EventsFragment extends Fragment {
+public class ChildAroundFragment extends Fragment {
 
     private AttractionAdapter attractionAdapter;
 
-    public EventsFragment() {
+    public ChildAroundFragment() {
         // Required empty public constructor
     }
 
@@ -29,18 +29,19 @@ public class EventsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> eventsList = new ArrayList<Attraction>();
+        ArrayList<Attraction> aroundList= new ArrayList<Attraction>();
 
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), eventsList);
+        attractionAdapter = new AttractionAdapter(getActivity(), aroundList);
 
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
