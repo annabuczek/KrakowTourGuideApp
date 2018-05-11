@@ -1,6 +1,7 @@
 package com.example.android.krakowtourguideapp;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
  */
 public class EventsFragment extends Fragment {
 
+
     private AttractionAdapter attractionAdapter;
 
     public EventsFragment() {
@@ -31,11 +33,11 @@ public class EventsFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> eventsList = new ArrayList<Attraction>();
 
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        eventsList.add(new Attraction("event1", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        eventsList.add(new Attraction("event2", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        eventsList.add(new Attraction("event3", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        eventsList.add(new Attraction("event4", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        eventsList.add(new Attraction("event5", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), eventsList);

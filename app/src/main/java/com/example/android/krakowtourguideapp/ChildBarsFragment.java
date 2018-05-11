@@ -31,11 +31,11 @@ public class ChildBarsFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> barsList= new ArrayList<Attraction>();
 
-        barsList.add(new Attraction("Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
-        barsList.add(new Attraction("Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
-        barsList.add(new Attraction("Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
-        barsList.add(new Attraction("Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
-        barsList.add(new Attraction("Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
+        barsList.add(new Attraction("bar1", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
+        barsList.add(new Attraction("bar2", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
+        barsList.add(new Attraction("bar3", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
+        barsList.add(new Attraction("bar4", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
+        barsList.add(new Attraction("bar5", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), barsList);

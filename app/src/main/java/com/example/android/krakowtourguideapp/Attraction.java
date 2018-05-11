@@ -9,11 +9,21 @@ public class Attraction {
     private String mTitle;
     private String mDescriptionShort;
     private int mImage;
+    private String mIndicator;
 
-    public Attraction(String title, String descriptionShort, int image) {
+    public Attraction(String indicator, String title, String descriptionShort, int image) {
+        mIndicator = indicator;
         mTitle = title;
         mDescriptionShort = descriptionShort;
         mImage = image;
+    }
+
+    public String getIndicator() {
+        return mIndicator;
+    }
+
+    public void setIndicator(String indicator) {
+        this.mIndicator = indicator;
     }
 
     public String getTitle() {
@@ -39,4 +49,5 @@ public class Attraction {
     public void setImage(int image) {
         mImage = image;
     }
+
 }

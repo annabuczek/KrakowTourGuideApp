@@ -31,11 +31,11 @@ public class ChildActivitiesFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> activitiesList= new ArrayList<Attraction>();
 
-        activitiesList.add(new Attraction("Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
-        activitiesList.add(new Attraction("Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
-        activitiesList.add(new Attraction("Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
-        activitiesList.add(new Attraction("Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
-        activitiesList.add(new Attraction("Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
+        activitiesList.add(new Attraction("activ1", "Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
+        activitiesList.add(new Attraction("activ2", "Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
+        activitiesList.add(new Attraction("activ3", "Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
+        activitiesList.add(new Attraction("activ4", "Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
+        activitiesList.add(new Attraction("activ5", "Activity", "Jakaś aktywność", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), activitiesList);

@@ -30,11 +30,11 @@ public class SightsFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> sightsList= new ArrayList<Attraction>();
 
-        sightsList.add(new Attraction("Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
-        sightsList.add(new Attraction("Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
-        sightsList.add(new Attraction("Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
-        sightsList.add(new Attraction("Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
-        sightsList.add(new Attraction("Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
+        sightsList.add(new Attraction("sights1", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
+        sightsList.add(new Attraction("sights2", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
+        sightsList.add(new Attraction("sights3", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
+        sightsList.add(new Attraction("sights4", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
+        sightsList.add(new Attraction("sights5", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), sightsList);

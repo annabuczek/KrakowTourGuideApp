@@ -18,6 +18,10 @@
     <string name="nav_drawer_category_about">About</string>
     <string name="nav_drawer_category_exit">Exit</string>
 
+    <!--Bottom Navigation View Strings-->
+    <string name="nav_bottom_item_1">Home</string>
+    <string name="nav_bottom_item_2">Favorites</string>
+
     <!--Tabs Categories Strings-->
     <string name="tab_restaurants">restaurants</string>
     <string name="tab_bars">bars</string>
@@ -27,6 +31,59 @@
     <string name="tab_activities">activities</string>
     <string name="tab_around">around</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_overview">overview</string>
+    <string name="tab_history">history</string>
+    <string name="tab_info">info</string>
+
+    <!--Home Fragment Strings-->
+    <string name="home_fragment_overview">Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+        Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis,
+        malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
+        Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor.
+        Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec
+        malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi.
+        Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed,
+        vestibulum id, eleifend justo vel bibendum sapien massa ac turpis faucibus orci luctus non,
+        consectetuer lobortis quis, varius in, purus. Integer ultrices posuere cubilia Curae,
+        Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices
+        volutpat. Nullam wisi ultricies a, gravida vitae, dapibus risus ante sodales lectus
+        blandit eu, tempor diam pede cursus vitae, ultricies eu, faucibus quis, porttitor
+        eros cursus lectus, pellentesque eget, bibendum a, gravida ullamcorper quam.
+        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem.
+        In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+        risus. Sed vel lectus. Ut sagittis, ipsum dolor quam.</string>
+
+    <string name="home_fragment_history">Litwo! Ojczyzno moja! Ty jesteś jak zdrowie. Ile cię stracił.
+        Dziś człowieka nie szukać prawodawstwa w której lat siedzi żadna. To nie staropolska,
+        ani małą. niełatwą, bo tak nie śmieli. I wnet sierpy gromadnie dzwoniąc we łzach
+        i płynnie mówił, i jakoby zlewa. I Wojski poznał panów rozmów trwała już robił projekt,
+        że w żałobie. Sam Woźny po stole i zmniejsza. I starzy i bawi się nagłe,
+        jej był żonaty a bij jak zdrowie. Ile cię trzeba cenić, ten odwiązywać, składać.
+        Właśnie dwukonną bryką wjechał młody a każdy mimowolnie porządku pilnował.
+        Bo nie widział we wsi długo pracować potrzeba. Słońce, Jego robotnik,
+        kiedy reszta świat we brzozowym gaju stał kwestarz, Sędzia nigdy sługom należy
+        chartu Sokołowi. Pytano zdania innych. więc i na drugim końcu stoła naprzód
+        dzieci mało w pół godziny już późno i jeszcze kołyszą się w czamarce krakowskiej,
+        z las wiąże w tem miejscu sobie zostawionem. Trudno było. bo tak nas powrócisz
+        cudem Gdy w pogody lilia jeziór skroń białą twarz, usta kraśne jak przystało
+        drugich wiek, urodzenie, cnoty, obyczaje chowa i na swym dworze. Nikt go nie.</string>
+
+    <string name="home_fragment_info">Drogi Marszałku, Wysoka Izbo. PKB rośnie. Z drugiej strony,
+        wykorzystanie unijnych dotacji zabezpiecza udział szerokiej grupie w przygotowaniu
+        i bogate doświadczenia pozwalają na dalszy rozwój różnych form oddziaływania.
+        Nie muszę państwa przekonywać, że zawiązanie koalicji jest ważne zadanie w określaniu
+        postaw uczestników wobec zadań stanowionych przez organizację. De facto, zakończenie
+        tego projektu pomaga w restrukturyzacji przedsiębiorstwa. Z pełną odpowiedzialnością
+        mogę stwierdzić iż skoordynowanie pracy obu urzędów powoduje docenianie wag nowych
+        propozycji. Praktyka dnia codziennego dowodzi, że inwestowanie w tym zakresie jest to,
+        iż konsultacja z tym, zakres i bogate doświadczenia pozwalają na uwadze,
+        że dokończenie aktualnych projektów pomaga w przygotowaniu i rozwijanie struktur
+        wymaga niezwykłej precyzji w restrukturyzacji przedsiębiorstwa. Co mamy na celu.
+        Koleżanki i unowocześniania kierunków rozwoju. W ten sposób rozpoczęcie powszechnej
+        akcji kształtowania podstaw zabezpiecza udział szerokiej grupie w tym zakresie ukazuje
+        nam efekt postaw uczestników wobec zadań programowych powoduje docenianie wag systemu
+        powszechnego uczestnictwa. Przez ostatnie kilkanaście lat odkryliśmy że inwestowanie
+        w restrukturyzacji przedsiębiorstwa. Mając na konsultacja z tym, że usprawnienie systemu
+        finansowego wymaga sprecyzowania i realizacji istniejących kryteriów koliduje
+        z powodu dalszych kierunków rozwoju. Przez ostatnie kilkanaście.</string>
 </resources>

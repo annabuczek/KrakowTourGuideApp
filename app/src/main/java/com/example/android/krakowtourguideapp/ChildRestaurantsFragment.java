@@ -31,11 +31,11 @@ public class ChildRestaurantsFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> restaurantsList= new ArrayList<Attraction>();
 
-        restaurantsList.add(new Attraction("OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
-        restaurantsList.add(new Attraction("OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
-        restaurantsList.add(new Attraction("OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
-        restaurantsList.add(new Attraction("OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
-        restaurantsList.add(new Attraction("OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
+        restaurantsList.add(new Attraction("rest1", "OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
+        restaurantsList.add(new Attraction("rest2", "OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
+        restaurantsList.add(new Attraction("rest3", "OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
+        restaurantsList.add(new Attraction("rest4", "OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
+        restaurantsList.add(new Attraction("rest5", "OrientalSpoon", "Oriental Family", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), restaurantsList);

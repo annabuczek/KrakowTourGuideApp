@@ -8,7 +8,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -30,11 +32,11 @@ public class TopAttractionsFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> topAttractionsList= new ArrayList<Attraction>();
 
-        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
+        topAttractionsList.add(new Attraction("top1", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
+        topAttractionsList.add(new Attraction("top2", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
+        topAttractionsList.add(new Attraction("top3", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
+        topAttractionsList.add(new Attraction("top4", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
+        topAttractionsList.add(new Attraction("top5", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), topAttractionsList);
@@ -56,4 +58,6 @@ public class TopAttractionsFragment extends Fragment {
 //        Set adapter to List View
         listView.setAdapter(attractionAdapter);
     }
+
+
 }

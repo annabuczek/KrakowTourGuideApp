@@ -31,11 +31,11 @@ public class ChildClubsFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> clubsList= new ArrayList<Attraction>();
 
-        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
-        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
-        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
-        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
-        clubsList.add(new Attraction("Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("club1", "Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("club2", "Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("club3", "Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("club4", "Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
+        clubsList.add(new Attraction("club5", "Teatro Cubano", "Taki tam klub", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), clubsList);

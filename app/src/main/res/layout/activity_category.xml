@@ -20,13 +20,24 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             android:elevation="4dp"
-            android:theme="@style/MyActionBarTheme">
-        </android.support.v7.widget.Toolbar>
+            android:theme="@style/MyActionBarTheme"/>
+
 
         <FrameLayout
             android:id="@+id/category_fragment_content_frame"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottom_nv_view"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:itemIconTint="@color/nav_bottom_state_list"
+            app:itemTextColor="@color/nav_bottom_state_list"
+            app:menu="@menu/nav_bottom_menu" />
+
 
     </LinearLayout>
 
@@ -36,7 +47,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        app:menu="@menu/category_nav_drawer_menu"
+        app:menu="@menu/nav_drawer_menu"
         app:headerLayout="@layout/nav_header"/>
 
 </android.support.v4.widget.DrawerLayout>

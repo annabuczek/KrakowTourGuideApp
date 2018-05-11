@@ -99,6 +99,9 @@
     <style name="FavouriteImageViewStyle">
         <item name="android:paddingTop">@dimen/card_view_padding_big</item>
         <item name="android:paddingBottom">@dimen/card_view_padding_main</item>
+        <item name="android:paddingStart">@dimen/card_view_padding_main</item>
+        <item name="android:paddingEnd">@dimen/card_view_padding_main</item>
+        <item name="android:background">@android:color/transparent</item>
     </style>
 
     <!--Tabs Style-->
@@ -109,6 +112,13 @@
         <item name="tabMaxWidth">0dp</item>
         <item name="tabMode">fixed</item>
         <item name="tabGravity">fill</item>
+    </style>
 
+    <!--Home Fragment Style-->
+    <style name="HomeTextViewStyle">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
     </style>
 </resources>

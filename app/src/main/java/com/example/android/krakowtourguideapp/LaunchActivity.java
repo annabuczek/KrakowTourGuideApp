@@ -22,6 +22,7 @@ public class LaunchActivity extends AppCompatActivity {
 //                Start CategoryActivity by clicking on the button
                 Intent i = new Intent(LaunchActivity.this, CategoryActivity.class);
                 startActivity(i);
+                finish();
             }
         });
     }

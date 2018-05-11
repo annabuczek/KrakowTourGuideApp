@@ -31,11 +31,11 @@ public class ChildAroundFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> aroundList= new ArrayList<Attraction>();
 
-        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
-        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
-        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
-        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
-        aroundList.add(new Attraction("Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("around1","Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("around2", "Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("around3", "Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("around4", "Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction("around5", "Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), aroundList);

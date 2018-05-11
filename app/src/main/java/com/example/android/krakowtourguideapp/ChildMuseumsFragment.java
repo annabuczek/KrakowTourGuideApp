@@ -31,11 +31,11 @@ public class ChildMuseumsFragment extends Fragment {
 //        Create ArrayList of objects
         ArrayList<Attraction> museumsList= new ArrayList<Attraction>();
 
-        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
-        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
-        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
-        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
-        museumsList.add(new Attraction("Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("mus1", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("mus2", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("mus3", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("mus4", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction("mus5", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), museumsList);
