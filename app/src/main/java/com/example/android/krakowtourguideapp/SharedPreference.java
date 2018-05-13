@@ -3,6 +3,7 @@ package com.example.android.krakowtourguideapp;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -50,10 +51,11 @@ public class SharedPreference {
         saveFavorites(context, favorites);
     }
 
-    public void removeFavorite(Context context, Attraction favoriteAttraction) {
+    public void removeFavorite(Context context, int index) {
         ArrayList<Attraction> favorites = getFavorites(context);
         if (favorites != null) {
-            favorites.remove(favoriteAttraction);
+            Log.v("SharedPreference", "Value of index is" + index);
+            favorites.remove(index);
             saveFavorites(context, favorites);
         }
     }

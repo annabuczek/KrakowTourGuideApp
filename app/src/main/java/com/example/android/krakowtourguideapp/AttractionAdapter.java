@@ -34,13 +34,13 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         sharedPreference = new SharedPreference();
     }
 
-    public AttractionAdapter(Activity context, List<Attraction> attractionsList, String whichFragment) {
-        super(context, 0, attractionsList);
-        this.whichFragment = whichFragment;
-        this.context = context;
-        this.attractionsList = attractionsList;
-        sharedPreference = new SharedPreference();
-    }
+//    public AttractionAdapter(Activity context, List<Attraction> attractionsList, String whichFragment) {
+//        super(context, 0, attractionsList);
+//        this.whichFragment = whichFragment;
+//        this.context = context;
+//        this.attractionsList = attractionsList;
+//        sharedPreference = new SharedPreference();
+//    }
 
     @Override
     public int getCount() {
@@ -55,7 +55,7 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         final Attraction currentAttraction = getItem(position);
 
@@ -92,7 +92,7 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
                     favoriteImageButton.setImageResource(R.drawable.ic_action_favorite);
                     Toast.makeText(getContext(), "Added to Favourites", Toast.LENGTH_SHORT).show();
                 } else {
-                    sharedPreference.removeFavorite(context, currentAttraction);
+                    sharedPreference.removeFavorite(context, position);
                     favoriteImageButton.setTag("empty");
                     favoriteImageButton.setImageResource(R.drawable.ic_action_favorite_border);
 //                    if (whichFragment.equalsIgnoreCase(FavoritesFragment.FRAGMENT_ID)) {
