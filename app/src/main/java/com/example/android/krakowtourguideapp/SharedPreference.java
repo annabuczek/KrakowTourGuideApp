@@ -51,10 +51,15 @@ public class SharedPreference {
         saveFavorites(context, favorites);
     }
 
-    public void removeFavorite(Context context, int index) {
+    public void removeFavorite(Context context, Attraction favoriteAttraction) {
         ArrayList<Attraction> favorites = getFavorites(context);
+        int index = 0;
         if (favorites != null) {
-            Log.v("SharedPreference", "Value of index is" + index);
+            for (Attraction attraction : favorites) {
+                if (attraction.getIndicator().equalsIgnoreCase(favoriteAttraction.getIndicator())) {
+                    index = favorites.indexOf(attraction);
+                }
+            }
             favorites.remove(index);
             saveFavorites(context, favorites);
         }

@@ -92,7 +92,7 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
                     favoriteImageButton.setImageResource(R.drawable.ic_action_favorite);
                     Toast.makeText(getContext(), "Added to Favourites", Toast.LENGTH_SHORT).show();
                 } else {
-                    sharedPreference.removeFavorite(context, position);
+                    sharedPreference.removeFavorite(context, currentAttraction);
                     favoriteImageButton.setTag("empty");
                     favoriteImageButton.setImageResource(R.drawable.ic_action_favorite_border);
 //                    if (whichFragment.equalsIgnoreCase(FavoritesFragment.FRAGMENT_ID)) {

@@ -35,6 +35,16 @@
     <string name="tab_history">history</string>
     <string name="tab_info">info</string>
 
+    <!--Detail Activity Strings-->
+    <string name="detail_title">Title of something</string>
+    <string name="detail_description">This is something that will become something else when
+        I put it here but I dont know when exactly yet.</string>
+    <string name="detail_button_map">map</string>
+    <string name="detail_button_web">web</string>
+    <string name="detail_button_phone">phone</string>
+    <string name="detail_address">address</string>
+    <string name="detail_phone">phone</string>
+
     <!--Home Fragment Strings-->
     <string name="home_fragment_overview">Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
         Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis,

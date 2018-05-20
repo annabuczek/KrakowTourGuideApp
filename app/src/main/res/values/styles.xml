@@ -62,7 +62,6 @@
         <item name="android:layout_marginStart">@dimen/launch_ac_margin_horizontal_large</item>
     </style>
 
-    <!---->
 
     <!--Navigation Drawer Styles-->
     <style name="NavigationDrawerHeaderStyle">
@@ -96,7 +95,7 @@
         <item name="android:paddingEnd">@dimen/card_view_padding_main</item>
     </style>
 
-    <style name="FavouriteImageViewStyle">
+    <style name="FavoriteButtonStyle">
         <item name="android:paddingTop">@dimen/card_view_padding_big</item>
         <item name="android:paddingBottom">@dimen/card_view_padding_main</item>
         <item name="android:paddingStart">@dimen/card_view_padding_main</item>
@@ -113,6 +112,13 @@
         <item name="tabMode">fixed</item>
         <item name="tabGravity">fill</item>
     </style>
+    
+    <!--Divider Style-->
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
 
     <!--Home Fragment Style-->
     <style name="HomeTextViewStyle">
@@ -120,5 +126,29 @@
         <item name="android:textSize">20sp</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <!--Detail Activity Style-->
+    <style name="DetailTitleTextViewStyle">
+        <item name="android:padding">@dimen/detail_padding_big</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="DetailBodyTextViewStyle">
+        <item name="android:padding">@dimen/detail_padding_big</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextSecondary</item>
+    </style>
+
+    <style name="DetailDescriptionTextViewStyle" parent="DetailBodyTextViewStyle">
+        <item name="android:background">@color/colorPrimaryLight</item>
+    </style>
+
+    <style name="DetailButtonStyle">
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:textColor">@color/colorPrimary</item>
     </style>
 </resources>

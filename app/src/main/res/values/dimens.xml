@@ -23,4 +23,8 @@
 
     <!--Home Fragment Dimens-->
     <dimen name="home_padding_main">16dp</dimen>
+
+    <!--Detail Activity Dimens-->
+    <dimen name="detail_padding_main">8dp</dimen>
+    <dimen name="detail_padding_big">16dp</dimen>
 </resources>
