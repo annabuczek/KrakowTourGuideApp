@@ -20,7 +20,9 @@ import java.util.ArrayList;
  */
 public class ChildBarsFragment extends Fragment {
 
+    public final String DETAIL_VIEW_1 = "detail_view_full";
     private AttractionAdapter attractionAdapter;
+    private ArrayList<Attraction> barsList;
 
     public ChildBarsFragment() {
         // Required empty public constructor
@@ -31,13 +33,24 @@ public class ChildBarsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> barsList= new ArrayList<Attraction>();
+        barsList = new ArrayList<Attraction>();
 
-        barsList.add(new Attraction("bar1", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
-        barsList.add(new Attraction("bar2", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
-        barsList.add(new Attraction("bar3", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
-        barsList.add(new Attraction("bar4", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
-        barsList.add(new Attraction("bar5", "Banialuka", "Największa pijalnia", R.drawable.placeholder_card_view_image));
+        barsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.pub1_indicator), getString(R.string.pub1_title),
+                getString(R.string.pub1_description_short), getString(R.string.pub1_description), getString(R.string.pub1_address),
+                getString(R.string.pub1_phone), getString(R.string.pub1_phone_intent), getString(R.string.pub1_geo),
+                getString(R.string.pub1_web), DETAIL_VIEW_1));
+        barsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.pub2_indicator), getString(R.string.pub2_title),
+                getString(R.string.pub2_description_short), getString(R.string.pub2_description), getString(R.string.pub2_address),
+                getString(R.string.pub2_phone), getString(R.string.pub2_phone_intent), getString(R.string.pub2_geo),
+                getString(R.string.pub2_web), DETAIL_VIEW_1));
+        barsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.pub3_indicator), getString(R.string.pub3_title),
+                getString(R.string.pub3_description_short), getString(R.string.pub3_description), getString(R.string.pub3_address),
+                getString(R.string.pub3_phone), getString(R.string.pub3_phone_intent), getString(R.string.pub3_geo),
+                getString(R.string.pub3_web), DETAIL_VIEW_1));
+        barsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.pub4_indicator), getString(R.string.pub4_title),
+                getString(R.string.pub4_description_short), getString(R.string.pub4_description), getString(R.string.pub4_address),
+                getString(R.string.pub4_phone), getString(R.string.pub4_phone_intent), getString(R.string.pub4_geo),
+                getString(R.string.pub4_web), DETAIL_VIEW_1));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), barsList);
@@ -63,7 +76,19 @@ public class ChildBarsFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Attraction selectedAttraction = barsList.get(position);
+
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("ATTRACTION_IMG", selectedAttraction.getImage());
+                intent.putExtra("ATTRACTION_TITLE", selectedAttraction.getTitle());
+                intent.putExtra("ATTRACTION_DESCRIPTION", selectedAttraction.getDescription());
+                intent.putExtra("ATTRACTION_ADDRESS", selectedAttraction.getAddress());
+                intent.putExtra("DETAIL_VIEW", selectedAttraction.getDetailView());
+                intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                intent.putExtra("ATTRACTION_PHONE", selectedAttraction.getPhone());
+                intent.putExtra("ATTRACTION_PHONE_INTENT", selectedAttraction.getPhoneIntent());
+                intent.putExtra("ATTRACTION_WEB", selectedAttraction.getWebIntent());
+
                 startActivity(intent);
             }
         });

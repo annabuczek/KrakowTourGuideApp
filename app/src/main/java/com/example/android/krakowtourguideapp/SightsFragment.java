@@ -20,6 +20,9 @@ import java.util.ArrayList;
 public class SightsFragment extends Fragment {
 
     private AttractionAdapter attractionAdapter;
+    private ArrayList<Attraction> sightsList;
+    public final String DETAIL_VIEW_1 = "detail_view_full";
+    public final String DETAIL_VIEW_2 = "detail_view_less";
 
     public SightsFragment() {
         // Required empty public constructor
@@ -30,13 +33,22 @@ public class SightsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> sightsList= new ArrayList<Attraction>();
+        sightsList= new ArrayList<Attraction>();
 
-        sightsList.add(new Attraction("sights1", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
-        sightsList.add(new Attraction("sights2", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
-        sightsList.add(new Attraction("sights3", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
-        sightsList.add(new Attraction("sights4", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
-        sightsList.add(new Attraction("sights5", "Jakiś kopiec", "Tu będą atrakcje", R.drawable.placeholder_card_view_image));
+        sightsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.sight1_indicator), getString(R.string.sight1_title),
+                getString(R.string.sight1_description_short), getString(R.string.sight1_description), getString(R.string.sight1_address),
+                getString(R.string.sight1_phone), getString(R.string.sight1_phone_intent), getString(R.string.sight1_geo),
+                getString(R.string.sight1_web), DETAIL_VIEW_1));
+        sightsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.sight2_indicator), getString(R.string.sight2_title),
+                getString(R.string.sight2_description_short), getString(R.string.sight2_description), getString(R.string.sight2_address),
+                getString(R.string.sight2_geo), DETAIL_VIEW_2));
+        sightsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.sight3_indicator), getString(R.string.sight3_title),
+                getString(R.string.sight3_description_short), getString(R.string.sight3_description), getString(R.string.sight3_address),
+                getString(R.string.sight3_phone), getString(R.string.sight3_phone_intent), getString(R.string.sight3_geo),
+                getString(R.string.sight3_web), DETAIL_VIEW_1));
+        sightsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.sight4_indicator), getString(R.string.sight4_title),
+                getString(R.string.sight4_description_short), getString(R.string.sight4_description), getString(R.string.sight4_address),
+                getString(R.string.sight4_geo), DETAIL_VIEW_2));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), sightsList);
@@ -63,7 +75,23 @@ public class SightsFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Attraction selectedAttraction = sightsList.get(position);
+
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("ATTRACTION_IMG", selectedAttraction.getImage());
+                intent.putExtra("ATTRACTION_TITLE", selectedAttraction.getTitle());
+                intent.putExtra("ATTRACTION_DESCRIPTION", selectedAttraction.getDescription());
+                intent.putExtra("ATTRACTION_ADDRESS", selectedAttraction.getAddress());
+                intent.putExtra("DETAIL_VIEW", selectedAttraction.getDetailView());
+                if (selectedAttraction.getDetailView().equalsIgnoreCase(DETAIL_VIEW_1)) {
+                    intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                    intent.putExtra("ATTRACTION_PHONE", selectedAttraction.getPhone());
+                    intent.putExtra("ATTRACTION_PHONE_INTENT", selectedAttraction.getPhoneIntent());
+                    intent.putExtra("ATTRACTION_WEB", selectedAttraction.getWebIntent());
+                }
+                else {
+                    intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());}
+
                 startActivity(intent);
             }
         });

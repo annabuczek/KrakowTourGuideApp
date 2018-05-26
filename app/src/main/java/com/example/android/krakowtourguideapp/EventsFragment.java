@@ -22,7 +22,9 @@ import java.util.ArrayList;
 public class EventsFragment extends Fragment {
 
 
+    public final String DETAIL_VIEW_3 = "detail_view_event";
     private AttractionAdapter attractionAdapter;
+    private ArrayList<Attraction> eventsList;
 
     public EventsFragment() {
         // Required empty public constructor
@@ -33,13 +35,23 @@ public class EventsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> eventsList = new ArrayList<Attraction>();
+        eventsList = new ArrayList<Attraction>();
 
-        eventsList.add(new Attraction("event1", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("event2", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("event3", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("event4", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
-        eventsList.add(new Attraction("event5", "Event", "Tu będzie event", R.drawable.placeholder_card_view_image));
+        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event1_indicator), getString(R.string.event1_title),
+                getString(R.string.event1_description_short), getString(R.string.event1_description), getString(R.string.event1_address),
+                getString(R.string.event1_time), getString(R.string.event1_web), DETAIL_VIEW_3));
+        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event2_indicator), getString(R.string.event2_title),
+                getString(R.string.event2_description_short), getString(R.string.event2_description), getString(R.string.event2_address),
+                getString(R.string.event2_time), getString(R.string.event2_web), DETAIL_VIEW_3));
+        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event3_indicator), getString(R.string.event3_title),
+                getString(R.string.event3_description_short), getString(R.string.event3_description), getString(R.string.event3_address),
+                getString(R.string.event3_time), getString(R.string.event3_web), DETAIL_VIEW_3));
+        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event4_indicator), getString(R.string.event4_title),
+                getString(R.string.event4_description_short), getString(R.string.event4_description), getString(R.string.event4_address),
+                getString(R.string.event4_time), getString(R.string.event4_web), DETAIL_VIEW_3));
+        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event5_indicator), getString(R.string.event5_title),
+                getString(R.string.event5_description_short), getString(R.string.event5_description), getString(R.string.event5_address),
+                getString(R.string.event5_time), getString(R.string.event5_web), DETAIL_VIEW_3));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), eventsList);
@@ -65,7 +77,17 @@ public class EventsFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Attraction selectedAttraction = eventsList.get(position);
+
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("ATTRACTION_IMG", selectedAttraction.getImage());
+                intent.putExtra("ATTRACTION_TITLE", selectedAttraction.getTitle());
+                intent.putExtra("ATTRACTION_DESCRIPTION", selectedAttraction.getDescription());
+                intent.putExtra("ATTRACTION_ADDRESS", selectedAttraction.getAddress());
+                intent.putExtra("DETAIL_VIEW", selectedAttraction.getDetailView());
+                intent.putExtra("ATTRACTION_WEB", selectedAttraction.getWebIntent());
+                intent.putExtra("ATTRACTION_TIME", selectedAttraction.getTime());
+
                 startActivity(intent);
             }
         });

@@ -22,6 +22,10 @@ import java.util.ArrayList;
 public class TopAttractionsFragment extends Fragment {
 
     private AttractionAdapter attractionAdapter;
+    private ArrayList<Attraction> topAttractionsList;
+    public final String DETAIL_VIEW_1 = "detail_view_full";
+    public final String DETAIL_VIEW_2 = "detail_view_less";
+
 
     public TopAttractionsFragment() {
         // Required empty public constructor
@@ -32,13 +36,26 @@ public class TopAttractionsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> topAttractionsList= new ArrayList<Attraction>();
+        topAttractionsList = new ArrayList<Attraction>();
 
-        topAttractionsList.add(new Attraction("top1", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-        topAttractionsList.add(new Attraction("top2", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-        topAttractionsList.add(new Attraction("top3", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-        topAttractionsList.add(new Attraction("top4", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-        topAttractionsList.add(new Attraction("top5", "Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
+        topAttractionsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.top1_indicator),
+                getString(R.string.top1_title), getString(R.string.top1_description_short), getString(R.string.top1_description),
+                getString(R.string.top1_address), getString(R.string.top1_phone), getString(R.string.top1_phone_intent),
+                getString(R.string.top1_geo), getString(R.string.top1_web), DETAIL_VIEW_1));
+        topAttractionsList.add(new Attraction(R.drawable.top2_rynek_img, getString(R.string.top2_indicator), getString(R.string.top2_title),
+                getString(R.string.top2_description_short), getString(R.string.top2_description), getString(R.string.top2_address),
+                getString(R.string.top2_geo),DETAIL_VIEW_2));
+        topAttractionsList.add(new Attraction(R.drawable.top3_mariacki_img, getString(R.string.top3_indicator), getString(R.string.top3_title),
+                getString(R.string.top3_description_short), getString(R.string.top3_description), getString(R.string.top3_address),
+                getString(R.string.top3_phone), getString(R.string.top3_phone_intent), getString(R.string.top3_geo), getString(R.string.top3_web),
+                DETAIL_VIEW_1));
+        topAttractionsList.add(new Attraction(R.drawable.top4_wieliczka_img, getString(R.string.top4_indicator), getString(R.string.top4_title),
+                getString(R.string.top4_description_short), getString(R.string.top4_description), getString(R.string.top4_address),
+                getString(R.string.top4_phone), getString(R.string.top4_phone_intent), getString(R.string.top4_geo), getString(R.string.top4_web),
+                DETAIL_VIEW_1));
+        topAttractionsList.add(new Attraction(R.drawable.top5_kazimierz_img, getString(R.string.top5_indicator), getString(R.string.top5_title),
+                getString(R.string.top5_description_short), getString(R.string.top5_description), getString(R.string.top5_address),
+                getString(R.string.top5_geo),DETAIL_VIEW_2));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), topAttractionsList);
@@ -64,7 +81,23 @@ public class TopAttractionsFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Attraction selectedAttraction = topAttractionsList.get(position);
+
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("ATTRACTION_IMG", selectedAttraction.getImage());
+                intent.putExtra("ATTRACTION_TITLE", selectedAttraction.getTitle());
+                intent.putExtra("ATTRACTION_DESCRIPTION", selectedAttraction.getDescription());
+                intent.putExtra("ATTRACTION_ADDRESS", selectedAttraction.getAddress());
+                intent.putExtra("DETAIL_VIEW", selectedAttraction.getDetailView());
+                if (selectedAttraction.getDetailView().equalsIgnoreCase(DETAIL_VIEW_1)) {
+                    intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                    intent.putExtra("ATTRACTION_PHONE", selectedAttraction.getPhone());
+                    intent.putExtra("ATTRACTION_PHONE_INTENT", selectedAttraction.getPhoneIntent());
+                    intent.putExtra("ATTRACTION_WEB", selectedAttraction.getWebIntent());
+                }
+                else {
+                    intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                }
                 startActivity(intent);
             }
         });

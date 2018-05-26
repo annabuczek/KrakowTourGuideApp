@@ -21,6 +21,9 @@ import java.util.ArrayList;
 public class ChildAroundFragment extends Fragment {
 
     private AttractionAdapter attractionAdapter;
+    private ArrayList<Attraction> aroundList;
+    public final String DETAIL_VIEW_1 = "detail_view_full";
+    public final String DETAIL_VIEW_2 = "detail_view_less";
 
     public ChildAroundFragment() {
         // Required empty public constructor
@@ -31,13 +34,26 @@ public class ChildAroundFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> aroundList= new ArrayList<Attraction>();
+        aroundList= new ArrayList<Attraction>();
 
-        aroundList.add(new Attraction("around1","Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
-        aroundList.add(new Attraction("around2", "Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
-        aroundList.add(new Attraction("around3", "Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
-        aroundList.add(new Attraction("around4", "Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
-        aroundList.add(new Attraction("around5", "Tatra Mountains", "Widoczki jakieś", R.drawable.placeholder_card_view_image));
+        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around1_indicator), getString(R.string.around1_title),
+                getString(R.string.around1_description_short), getString(R.string.around1_description), getString(R.string.around1_address),
+                getString(R.string.around1_phone), getString(R.string.around1_phone_intent), getString(R.string.around1_geo),
+                getString(R.string.around1_web), DETAIL_VIEW_1));
+        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around2_indicator), getString(R.string.around2_title),
+                getString(R.string.around2_description_short), getString(R.string.around2_description), getString(R.string.around2_address),
+                getString(R.string.around2_geo), DETAIL_VIEW_2));
+        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around3_indicator), getString(R.string.around3_title),
+                getString(R.string.around3_description_short), getString(R.string.around3_description), getString(R.string.around3_address),
+                getString(R.string.around3_geo), DETAIL_VIEW_2));
+        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around4_indicator), getString(R.string.around4_title),
+                getString(R.string.around4_description_short), getString(R.string.around4_description), getString(R.string.around4_address),
+                getString(R.string.around4_phone), getString(R.string.around4_phone_intent), getString(R.string.around4_geo),
+                getString(R.string.around4_web), DETAIL_VIEW_1));
+        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around5_indicator), getString(R.string.around5_title),
+                getString(R.string.around5_description_short), getString(R.string.around5_description), getString(R.string.around5_address),
+                getString(R.string.around5_phone), getString(R.string.around5_phone_intent), getString(R.string.around5_geo),
+                getString(R.string.around5_web), DETAIL_VIEW_1));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), aroundList);
@@ -64,7 +80,23 @@ public class ChildAroundFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Attraction selectedAttraction = aroundList.get(position);
+
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("ATTRACTION_IMG", selectedAttraction.getImage());
+                intent.putExtra("ATTRACTION_TITLE", selectedAttraction.getTitle());
+                intent.putExtra("ATTRACTION_DESCRIPTION", selectedAttraction.getDescription());
+                intent.putExtra("ATTRACTION_ADDRESS", selectedAttraction.getAddress());
+                intent.putExtra("DETAIL_VIEW", selectedAttraction.getDetailView());
+                if (selectedAttraction.getDetailView().equalsIgnoreCase(DETAIL_VIEW_1)) {
+                    intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                    intent.putExtra("ATTRACTION_PHONE", selectedAttraction.getPhone());
+                    intent.putExtra("ATTRACTION_PHONE_INTENT", selectedAttraction.getPhoneIntent());
+                    intent.putExtra("ATTRACTION_WEB", selectedAttraction.getWebIntent());
+                }
+                else {
+                    intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                }
                 startActivity(intent);
             }
         });

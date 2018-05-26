@@ -20,7 +20,9 @@ import java.util.ArrayList;
  */
 public class ChildMuseumsFragment extends Fragment {
 
+    public final String DETAIL_VIEW_1 = "detail_view_full";
     private AttractionAdapter attractionAdapter;
+    private ArrayList<Attraction> museumsList;
 
     public ChildMuseumsFragment() {
         // Required empty public constructor
@@ -31,13 +33,28 @@ public class ChildMuseumsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 //        Create ArrayList of objects
-        ArrayList<Attraction> museumsList= new ArrayList<Attraction>();
+        museumsList = new ArrayList<Attraction>();
 
-        museumsList.add(new Attraction("mus1", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
-        museumsList.add(new Attraction("mus2", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
-        museumsList.add(new Attraction("mus3", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
-        museumsList.add(new Attraction("mus4", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
-        museumsList.add(new Attraction("mus5", "Museum", "Coś się wymyśli", R.drawable.placeholder_card_view_image));
+        museumsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.museum1_indicator), getString(R.string.museum1_title),
+                getString(R.string.museum1_description_short), getString(R.string.museum1_description), getString(R.string.museum1_address),
+                getString(R.string.museum1_phone), getString(R.string.museum1_phone_intent), getString(R.string.museum1_geo),
+                getString(R.string.museum1_web), DETAIL_VIEW_1));
+        museumsList.add(new Attraction(R.drawable.top2_rynek_img, getString(R.string.museum2_indicator), getString(R.string.museum2_title),
+                getString(R.string.museum2_description_short), getString(R.string.museum2_description), getString(R.string.museum2_address),
+                getString(R.string.museum2_phone), getString(R.string.museum2_phone_intent), getString(R.string.museum2_geo),
+                getString(R.string.museum2_web), DETAIL_VIEW_1));
+        museumsList.add(new Attraction(R.drawable.top2_rynek_img, getString(R.string.museum3_indicator), getString(R.string.museum3_title),
+                getString(R.string.museum3_description_short), getString(R.string.museum3_description), getString(R.string.museum3_address),
+                getString(R.string.museum3_phone), getString(R.string.museum3_phone_intent), getString(R.string.museum3_geo),
+                getString(R.string.museum3_web), DETAIL_VIEW_1));
+        museumsList.add(new Attraction(R.drawable.top2_rynek_img, getString(R.string.museum4_indicator), getString(R.string.museum4_title),
+                getString(R.string.museum4_description_short), getString(R.string.museum4_description), getString(R.string.museum4_address),
+                getString(R.string.museum4_phone), getString(R.string.museum4_phone_intent), getString(R.string.museum4_geo),
+                getString(R.string.museum4_web), DETAIL_VIEW_1));
+        museumsList.add(new Attraction(R.drawable.top2_rynek_img, getString(R.string.museum5_indicator), getString(R.string.museum5_title),
+                getString(R.string.museum5_description_short), getString(R.string.museum5_description), getString(R.string.museum5_address),
+                getString(R.string.museum5_phone), getString(R.string.museum5_phone_intent), getString(R.string.museum5_geo),
+                getString(R.string.museum5_web), DETAIL_VIEW_1));
 
 //        Create instance of custom Adapter
         attractionAdapter = new AttractionAdapter(getActivity(), museumsList);
@@ -63,7 +80,19 @@ public class ChildMuseumsFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Attraction selectedAttraction = museumsList.get(position);
+
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("ATTRACTION_IMG", selectedAttraction.getImage());
+                intent.putExtra("ATTRACTION_TITLE", selectedAttraction.getTitle());
+                intent.putExtra("ATTRACTION_DESCRIPTION", selectedAttraction.getDescription());
+                intent.putExtra("ATTRACTION_ADDRESS", selectedAttraction.getAddress());
+                intent.putExtra("DETAIL_VIEW", selectedAttraction.getDetailView());
+                intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                intent.putExtra("ATTRACTION_PHONE", selectedAttraction.getPhone());
+                intent.putExtra("ATTRACTION_PHONE_INTENT", selectedAttraction.getPhoneIntent());
+                intent.putExtra("ATTRACTION_WEB", selectedAttraction.getWebIntent());
+
                 startActivity(intent);
             }
         });
