@@ -181,7 +181,9 @@ public class DetailActivity extends AppCompatActivity {
         phoneView.setVisibility(View.GONE);
     }
 
-
-
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

@@ -1,5 +1,6 @@
 package com.example.android.krakowtourguideapp;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -117,6 +118,13 @@ public class CategoryActivity extends AppCompatActivity {
 
                 break;
             case R.id.nav_drawer_item_7:
+//                Create an intent to close an app
+                Intent ex = new Intent(Intent.ACTION_MAIN);
+                ex.addCategory(Intent.CATEGORY_HOME);
+                ex.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(ex);
+//                Finish current activity
+                finish();
                 break;
             default:
                 contentFragment = new TopAttractionsFragment();
