@@ -42,11 +42,15 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        //Call method to find views
         findViews();
+//        Set custom Action Bar
         setSupportActionBar(toolbar);
+//        Enable Up button on Action Bar
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
 
+//        Get Extras from Intent
         Intent i = getIntent();
         int attrImage = i.getIntExtra("ATTRACTION_IMG", 0);
         String attrTitle = i.getStringExtra("ATTRACTION_TITLE");
@@ -70,11 +74,14 @@ public class DetailActivity extends AppCompatActivity {
             setDetailViewEvent(attrImage, attrTitle, attrDescription, attrAddress, attrTime);
         }
 
+//        Set title of Action Bar as title of Attraction
         setTitle(attrTitle);
 
+//        Set on click listener on map button
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Open map with location after click on map button
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW);
                 mapIntent.setData(Uri.parse(geolocation));
                 mapIntent.setPackage("com.google.android.apps.maps");
@@ -83,10 +90,11 @@ public class DetailActivity extends AppCompatActivity {
                 }
             }
         });
-
+//          Set on click listener on web button
         webButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Open sttraction website after click on web button
                 Intent webIntent = new Intent(Intent.ACTION_VIEW);
                 webIntent.setData(Uri.parse(web));
                 if (webIntent.resolveActivity(getPackageManager()) != null) {
@@ -94,10 +102,11 @@ public class DetailActivity extends AppCompatActivity {
                 }
             }
         });
-
+//Set on clisk listener on phone button
         phoneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//                Open dial window after click on phone button
                 Intent phoneIntent = new Intent(Intent.ACTION_DIAL);
                 phoneIntent.setData(Uri.parse(phone));
                 if (phoneIntent.resolveActivity(getPackageManager()) != null) {
@@ -110,8 +119,8 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     @Override public boolean onOptionsItemSelected(MenuItem item) {
-
         super.onOptionsItemSelected(item);
+//        Finish activity after click on the up button
         switch (item.getItemId()) {
             case android.R.id.home:
                 finish();
@@ -120,6 +129,9 @@ public class DetailActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Helper method for finding all the needed views in activity_detail layout
+     */
     public void findViews() {
         toolbar = findViewById(R.id.detail_toolbar);
         photoImageView = findViewById(R.id.detail_image_view);
@@ -137,6 +149,16 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Method for populating views with data coming from intent extras.
+     * Also set visibility for views depending on data provided by intent.
+     * Method for Detail View with all information provided.
+     * @param image image of the Attraction
+     * @param title the name of the Attraction
+     * @param description description of the Attraction
+     * @param address address of the Attraction
+     * @param phone phone number for the Attraction
+     */
     public void setDetailViewFull(int image, String title, String description, String address, String phone) {
         photoImageView.setImageResource(image);
         titleTextView.setText(title);
@@ -153,6 +175,16 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Method for populating views with data coming from intent extras.
+     * Also set visibility for views depending on data provided by intent.
+     * Method for Detail View without phoneButton, webButton, and phoneTextView
+     *
+     * @param image image of the Attraction
+     * @param title the name of the Attraction
+     * @param description description of the Attraction
+     * @param address address of the Attraction
+     */
     public void setDetailViewLess(int image, String title, String description, String address) {
         photoImageView.setImageResource(image);
         titleTextView.setText(title);
@@ -165,6 +197,18 @@ public class DetailActivity extends AppCompatActivity {
         timeView.setVisibility(View.GONE);
     }
 
+    /**
+     * Method for populating views with data coming from intent extras.
+     * Also set visibility for views depending on data provided by intent.
+     * Method for Detail View without phoneButton, mapButton, and phoneTextView
+     * For events only with extra TextView for time
+     *
+     * @param image image of the Attraction
+     * @param title the name of the Attraction
+     * @param description description of the Attraction
+     * @param address address of the Attraction
+     * @param time time when the Attraction happens
+     */
     public void setDetailViewEvent(int image, String title, String description, String address, String time) {
         photoImageView.setImageResource(image);
         titleTextView.setText(title);
@@ -184,6 +228,7 @@ public class DetailActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+//        Finish activity if user exit activity by back button instead of up button
         finish();
     }
 }

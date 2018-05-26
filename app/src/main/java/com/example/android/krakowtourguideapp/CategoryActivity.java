@@ -24,11 +24,14 @@ public class CategoryActivity extends AppCompatActivity {
     private NavigationView mNavigationView;
     private android.support.v4.app.Fragment contentFragment;
 
+    int navMenuItemId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
+//        Call method to find views
         findViews();
 //      Set Support Action Bar as created earlier ToolBar
         setSupportActionBar(categoryToolbar);
@@ -41,6 +44,7 @@ public class CategoryActivity extends AppCompatActivity {
         setupNavigationDrawerContent(mNavigationView);
         setBottomNavigation();
 
+//        If there is no saved instance state, open HomeFragment
         if (savedInstanceState == null) {
             contentFragment = new HomeFragment();
             replaceFragment(contentFragment);
@@ -92,6 +96,7 @@ public class CategoryActivity extends AppCompatActivity {
      */
     private void selectNavigationDrawerContent(MenuItem menuItem) {
 
+
         switch(menuItem.getItemId()) {
 //            Attach TopAttractionsFragment when menu item is selected by the user
             case R.id.nav_drawer_item_1:
@@ -130,9 +135,13 @@ public class CategoryActivity extends AppCompatActivity {
                 contentFragment = new TopAttractionsFragment();
         }
 
+
 //        Set Fragment as a content of selected menu item
             replaceFragment(contentFragment);
+//        Set title of Action Bar as the name of MenuItem
             setActionBarTitle(menuItem);
+//            Get menu item ID for further use
+            navMenuItemId = menuItem.getItemId();
 
     }
 
@@ -143,9 +152,13 @@ public class CategoryActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.nav_bottom_item_1:
                         contentFragment = new HomeFragment();
+//                        Remove highlight from Navigation Drawer Menu Item when HomeFragment is selected
+                        mNavigationView.getMenu().findItem(navMenuItemId).setChecked(false);
                         break;
                     case R.id.nav_bottom_item_2:
                         contentFragment = new FavoritesFragment();
+//                        Remove highlight from Navigation Drawer Menu Item when FavoriteFragment is selected
+                        mNavigationView.getMenu().findItem(navMenuItemId).setChecked(false);
                         break;
 
                 }
