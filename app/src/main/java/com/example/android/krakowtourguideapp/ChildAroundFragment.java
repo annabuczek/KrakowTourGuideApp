@@ -36,21 +36,21 @@ public class ChildAroundFragment extends Fragment {
 //        Create ArrayList of objects
         aroundList= new ArrayList<Attraction>();
 
-        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around1_indicator), getString(R.string.around1_title),
+        aroundList.add(new Attraction(R.drawable.around1_auschwitz_img, getString(R.string.around1_indicator), getString(R.string.around1_title),
                 getString(R.string.around1_description_short), getString(R.string.around1_description), getString(R.string.around1_address),
                 getString(R.string.around1_phone), getString(R.string.around1_phone_intent), getString(R.string.around1_geo),
                 getString(R.string.around1_web), DETAIL_VIEW_1));
-        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around2_indicator), getString(R.string.around2_title),
+        aroundList.add(new Attraction(R.drawable.around2_zakopane_img, getString(R.string.around2_indicator), getString(R.string.around2_title),
                 getString(R.string.around2_description_short), getString(R.string.around2_description), getString(R.string.around2_address),
                 getString(R.string.around2_geo), DETAIL_VIEW_2));
-        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around3_indicator), getString(R.string.around3_title),
+        aroundList.add(new Attraction(R.drawable.around3_ojcow_img, getString(R.string.around3_indicator), getString(R.string.around3_title),
                 getString(R.string.around3_description_short), getString(R.string.around3_description), getString(R.string.around3_address),
                 getString(R.string.around3_geo), DETAIL_VIEW_2));
-        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around4_indicator), getString(R.string.around4_title),
+        aroundList.add(new Attraction(R.drawable.around3_tatry_img, getString(R.string.around4_indicator), getString(R.string.around4_title),
                 getString(R.string.around4_description_short), getString(R.string.around4_description), getString(R.string.around4_address),
                 getString(R.string.around4_phone), getString(R.string.around4_phone_intent), getString(R.string.around4_geo),
                 getString(R.string.around4_web), DETAIL_VIEW_1));
-        aroundList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.around5_indicator), getString(R.string.around5_title),
+        aroundList.add(new Attraction(R.drawable.around5_czestochowa_img, getString(R.string.around5_indicator), getString(R.string.around5_title),
                 getString(R.string.around5_description_short), getString(R.string.around5_description), getString(R.string.around5_address),
                 getString(R.string.around5_phone), getString(R.string.around5_phone_intent), getString(R.string.around5_geo),
                 getString(R.string.around5_web), DETAIL_VIEW_1));

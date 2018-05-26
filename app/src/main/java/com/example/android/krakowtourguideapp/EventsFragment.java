@@ -37,19 +37,19 @@ public class EventsFragment extends Fragment {
 //        Create ArrayList of objects
         eventsList = new ArrayList<Attraction>();
 
-        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event1_indicator), getString(R.string.event1_title),
+        eventsList.add(new Attraction(R.drawable.event1_muzeum_img, getString(R.string.event1_indicator), getString(R.string.event1_title),
                 getString(R.string.event1_description_short), getString(R.string.event1_description), getString(R.string.event1_address),
                 getString(R.string.event1_time), getString(R.string.event1_web), DETAIL_VIEW_3));
-        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event2_indicator), getString(R.string.event2_title),
+        eventsList.add(new Attraction(R.drawable.event2_juwenalia_img, getString(R.string.event2_indicator), getString(R.string.event2_title),
                 getString(R.string.event2_description_short), getString(R.string.event2_description), getString(R.string.event2_address),
                 getString(R.string.event2_time), getString(R.string.event2_web), DETAIL_VIEW_3));
-        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event3_indicator), getString(R.string.event3_title),
+        eventsList.add(new Attraction(R.drawable.event3_marathon_img, getString(R.string.event3_indicator), getString(R.string.event3_title),
                 getString(R.string.event3_description_short), getString(R.string.event3_description), getString(R.string.event3_address),
                 getString(R.string.event3_time), getString(R.string.event3_web), DETAIL_VIEW_3));
-        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event4_indicator), getString(R.string.event4_title),
+        eventsList.add(new Attraction(R.drawable.event4_film_img, getString(R.string.event4_indicator), getString(R.string.event4_title),
                 getString(R.string.event4_description_short), getString(R.string.event4_description), getString(R.string.event4_address),
                 getString(R.string.event4_time), getString(R.string.event4_web), DETAIL_VIEW_3));
-        eventsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.event5_indicator), getString(R.string.event5_title),
+        eventsList.add(new Attraction(R.drawable.event5_jewish_img, getString(R.string.event5_indicator), getString(R.string.event5_title),
                 getString(R.string.event5_description_short), getString(R.string.event5_description), getString(R.string.event5_address),
                 getString(R.string.event5_time), getString(R.string.event5_web), DETAIL_VIEW_3));
 

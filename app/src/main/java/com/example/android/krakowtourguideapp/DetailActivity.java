@@ -70,6 +70,8 @@ public class DetailActivity extends AppCompatActivity {
             setDetailViewEvent(attrImage, attrTitle, attrDescription, attrAddress, attrTime);
         }
 
+        setTitle(attrTitle);
+
         mapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

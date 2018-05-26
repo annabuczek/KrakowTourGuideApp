@@ -35,19 +35,19 @@ public class ChildActivitiesFragment extends Fragment {
 //        Create ArrayList of objects
         activitiesList = new ArrayList<Attraction>();
 
-        activitiesList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.activity1_indicator), getString(R.string.activity1_title),
+        activitiesList.add(new Attraction(R.drawable.activity1_shooting_img, getString(R.string.activity1_indicator), getString(R.string.activity1_title),
                 getString(R.string.activity1_description_short), getString(R.string.activity1_description), getString(R.string.activity1_address),
                 getString(R.string.activity1_phone), getString(R.string.activity1_phone_intent), getString(R.string.activity1_geo),
                 getString(R.string.activity1_web), DETAIL_VIEW_1));
-        activitiesList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.activity2_indicator), getString(R.string.activity2_title),
+        activitiesList.add(new Attraction(R.drawable.activity2_axe_img, getString(R.string.activity2_indicator), getString(R.string.activity2_title),
                 getString(R.string.activity2_description_short), getString(R.string.activity2_description), getString(R.string.activity2_address),
                 getString(R.string.activity2_phone), getString(R.string.activity2_phone_intent), getString(R.string.activity2_geo),
                 getString(R.string.activity2_web), DETAIL_VIEW_1));
-        activitiesList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.activity3_indicator), getString(R.string.activity3_title),
+        activitiesList.add(new Attraction(R.drawable.activity3_experience_img, getString(R.string.activity3_indicator), getString(R.string.activity3_title),
                 getString(R.string.activity3_description_short), getString(R.string.activity3_description), getString(R.string.activity3_address),
                 getString(R.string.activity3_phone), getString(R.string.activity3_phone_intent), getString(R.string.activity3_geo),
                 getString(R.string.activity3_web), DETAIL_VIEW_1));
-        activitiesList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.activity4_indicator), getString(R.string.activity4_title),
+        activitiesList.add(new Attraction(R.drawable.activity4_kino_img, getString(R.string.activity4_indicator), getString(R.string.activity4_title),
                 getString(R.string.activity4_description_short), getString(R.string.activity4_description), getString(R.string.activity4_address),
                 getString(R.string.activity4_phone), getString(R.string.activity4_phone_intent), getString(R.string.activity4_geo),
                 getString(R.string.activity4_web), DETAIL_VIEW_1));

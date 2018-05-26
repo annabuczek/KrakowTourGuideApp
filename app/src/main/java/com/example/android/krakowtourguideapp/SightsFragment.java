@@ -35,18 +35,18 @@ public class SightsFragment extends Fragment {
 //        Create ArrayList of objects
         sightsList= new ArrayList<Attraction>();
 
-        sightsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.sight1_indicator), getString(R.string.sight1_title),
+        sightsList.add(new Attraction(R.drawable.sight1_barbakan_img, getString(R.string.sight1_indicator), getString(R.string.sight1_title),
                 getString(R.string.sight1_description_short), getString(R.string.sight1_description), getString(R.string.sight1_address),
                 getString(R.string.sight1_phone), getString(R.string.sight1_phone_intent), getString(R.string.sight1_geo),
                 getString(R.string.sight1_web), DETAIL_VIEW_1));
-        sightsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.sight2_indicator), getString(R.string.sight2_title),
+        sightsList.add(new Attraction(R.drawable.sight2_brama_img, getString(R.string.sight2_indicator), getString(R.string.sight2_title),
                 getString(R.string.sight2_description_short), getString(R.string.sight2_description), getString(R.string.sight2_address),
                 getString(R.string.sight2_geo), DETAIL_VIEW_2));
-        sightsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.sight3_indicator), getString(R.string.sight3_title),
+        sightsList.add(new Attraction(R.drawable.sight3_mound_img, getString(R.string.sight3_indicator), getString(R.string.sight3_title),
                 getString(R.string.sight3_description_short), getString(R.string.sight3_description), getString(R.string.sight3_address),
                 getString(R.string.sight3_phone), getString(R.string.sight3_phone_intent), getString(R.string.sight3_geo),
                 getString(R.string.sight3_web), DETAIL_VIEW_1));
-        sightsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.sight4_indicator), getString(R.string.sight4_title),
+        sightsList.add(new Attraction(R.drawable.sight4_dragon_img, getString(R.string.sight4_indicator), getString(R.string.sight4_title),
                 getString(R.string.sight4_description_short), getString(R.string.sight4_description), getString(R.string.sight4_address),
                 getString(R.string.sight4_geo), DETAIL_VIEW_2));
 

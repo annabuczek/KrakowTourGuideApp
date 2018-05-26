@@ -35,19 +35,19 @@ public class ChildRestaurantsFragment extends Fragment {
 //        Create ArrayList of objects
         restaurantsList = new ArrayList<Attraction>();
 
-        restaurantsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.restaurant1_indicator), getString(R.string.restaurant1_title),
+        restaurantsList.add(new Attraction(R.drawable.restaurant1_pierogi_img, getString(R.string.restaurant1_indicator), getString(R.string.restaurant1_title),
                 getString(R.string.restaurant1_description_short), getString(R.string.restaurant1_description), getString(R.string.restaurant1_address),
                 getString(R.string.restaurant1_phone), getString(R.string.restaurant1_phone_intent), getString(R.string.restaurant1_geo),
                 getString(R.string.restaurant1_web), DETAIL_VIEW_1));
-        restaurantsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.restaurant2_indicator), getString(R.string.restaurant2_title),
+        restaurantsList.add(new Attraction(R.drawable.restaurant2_noreny_img, getString(R.string.restaurant2_indicator), getString(R.string.restaurant2_title),
                 getString(R.string.restaurant2_description_short), getString(R.string.restaurant2_description), getString(R.string.restaurant2_address),
                 getString(R.string.restaurant2_phone), getString(R.string.restaurant2_phone_intent), getString(R.string.restaurant2_geo),
                 getString(R.string.restaurant2_web), DETAIL_VIEW_1));
-        restaurantsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.restaurant3_indicator), getString(R.string.restaurant3_title),
+        restaurantsList.add(new Attraction(R.drawable.restaurant3_cakester_img, getString(R.string.restaurant3_indicator), getString(R.string.restaurant3_title),
                 getString(R.string.restaurant3_description_short), getString(R.string.restaurant3_description), getString(R.string.restaurant3_address),
                 getString(R.string.restaurant3_phone), getString(R.string.restaurant3_phone_intent), getString(R.string.restaurant3_geo),
                 getString(R.string.restaurant3_web), DETAIL_VIEW_1));
-        restaurantsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.restaurant4_indicator), getString(R.string.restaurant4_title),
+        restaurantsList.add(new Attraction(R.drawable.restaurant4_sushi_img, getString(R.string.restaurant4_indicator), getString(R.string.restaurant4_title),
                 getString(R.string.restaurant4_description_short), getString(R.string.restaurant4_description), getString(R.string.restaurant4_address),
                 getString(R.string.restaurant4_phone), getString(R.string.restaurant4_phone_intent), getString(R.string.restaurant4_geo),
                 getString(R.string.restaurant4_web), DETAIL_VIEW_1));

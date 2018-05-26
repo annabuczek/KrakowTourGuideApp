@@ -35,19 +35,19 @@ public class ChildClubsFragment extends Fragment {
 //        Create ArrayList of objects
         clubsList = new ArrayList<Attraction>();
 
-        clubsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.club1_indicator), getString(R.string.club1_title),
+        clubsList.add(new Attraction(R.drawable.club1_szpitalna_img, getString(R.string.club1_indicator), getString(R.string.club1_title),
                 getString(R.string.club1_description_short), getString(R.string.club1_description), getString(R.string.club1_address),
                 getString(R.string.club1_phone), getString(R.string.club1_phone_intent), getString(R.string.club1_geo),
                 getString(R.string.club1_web), DETAIL_VIEW_1));
-        clubsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.club2_indicator), getString(R.string.club2_title),
+        clubsList.add(new Attraction(R.drawable.club2_choice_img, getString(R.string.club2_indicator), getString(R.string.club2_title),
                 getString(R.string.club2_description_short), getString(R.string.club2_description), getString(R.string.club2_address),
                 getString(R.string.club2_phone), getString(R.string.club2_phone_intent), getString(R.string.club2_geo),
                 getString(R.string.club2_web), DETAIL_VIEW_1));
-        clubsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.club3_indicator), getString(R.string.club3_title),
+        clubsList.add(new Attraction(R.drawable.club3_four_img, getString(R.string.club3_indicator), getString(R.string.club3_title),
                 getString(R.string.club3_description_short), getString(R.string.club3_description), getString(R.string.club3_address),
                 getString(R.string.club3_phone), getString(R.string.club3_phone_intent), getString(R.string.club3_geo),
                 getString(R.string.club3_web), DETAIL_VIEW_1));
-        clubsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.club4_indicator), getString(R.string.club4_title),
+        clubsList.add(new Attraction(R.drawable.club4_cubano_img, getString(R.string.club4_indicator), getString(R.string.club4_title),
                 getString(R.string.club4_description_short), getString(R.string.club4_description), getString(R.string.club4_address),
                 getString(R.string.club4_phone), getString(R.string.club4_phone_intent), getString(R.string.club4_geo),
                 getString(R.string.club4_web), DETAIL_VIEW_1));

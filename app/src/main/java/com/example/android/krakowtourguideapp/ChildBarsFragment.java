@@ -35,19 +35,19 @@ public class ChildBarsFragment extends Fragment {
 //        Create ArrayList of objects
         barsList = new ArrayList<Attraction>();
 
-        barsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.pub1_indicator), getString(R.string.pub1_title),
+        barsList.add(new Attraction(R.drawable.pub1_banialuka_img, getString(R.string.pub1_indicator), getString(R.string.pub1_title),
                 getString(R.string.pub1_description_short), getString(R.string.pub1_description), getString(R.string.pub1_address),
                 getString(R.string.pub1_phone), getString(R.string.pub1_phone_intent), getString(R.string.pub1_geo),
                 getString(R.string.pub1_web), DETAIL_VIEW_1));
-        barsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.pub2_indicator), getString(R.string.pub2_title),
+        barsList.add(new Attraction(R.drawable.pub2_zust_img, getString(R.string.pub2_indicator), getString(R.string.pub2_title),
                 getString(R.string.pub2_description_short), getString(R.string.pub2_description), getString(R.string.pub2_address),
                 getString(R.string.pub2_phone), getString(R.string.pub2_phone_intent), getString(R.string.pub2_geo),
                 getString(R.string.pub2_web), DETAIL_VIEW_1));
-        barsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.pub3_indicator), getString(R.string.pub3_title),
+        barsList.add(new Attraction(R.drawable.pub3_eszeweria_img, getString(R.string.pub3_indicator), getString(R.string.pub3_title),
                 getString(R.string.pub3_description_short), getString(R.string.pub3_description), getString(R.string.pub3_address),
                 getString(R.string.pub3_phone), getString(R.string.pub3_phone_intent), getString(R.string.pub3_geo),
                 getString(R.string.pub3_web), DETAIL_VIEW_1));
-        barsList.add(new Attraction(R.drawable.top1_wawel_img, getString(R.string.pub4_indicator), getString(R.string.pub4_title),
+        barsList.add(new Attraction(R.drawable.pub4_cyber_img, getString(R.string.pub4_indicator), getString(R.string.pub4_title),
                 getString(R.string.pub4_description_short), getString(R.string.pub4_description), getString(R.string.pub4_address),
                 getString(R.string.pub4_phone), getString(R.string.pub4_phone_intent), getString(R.string.pub4_geo),
                 getString(R.string.pub4_web), DETAIL_VIEW_1));

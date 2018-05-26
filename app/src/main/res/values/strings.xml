@@ -571,28 +571,28 @@
     <string name="restaurant2_address">Krupnicza 6, 33&#8211;332 Kraków</string>
 
     <string name="restaurant3_indicator">restaurant3</string>
-    <string name="restaurant3_title">Nago Sushi and Sake</string>
-    <string name="restaurant3_description_short">Best Sushi in Kraków</string>
-    <string name="restaurant3_description">Nago in Polish means naked. We call ourselves Nago because
+    <string name="restaurant3_title">Cakester Cafe Kraków</string>
+    <string name="restaurant3_description_short">The healthiest sweets in Kraków</string>
+    <string name="restaurant3_description">No gluten, no sugar, no harmful additions. In their cakes
+    you will find only the best quality ingredients. Amazing taste and something good for your body.</string>
+    <string name="restaurant3_geo">geo:0,0?q=Cakester+Cafe+Kraków</string>
+    <string name="restaurant3_web">http://www.facebook.com/cakestercafekrakow/</string>
+    <string name="restaurant3_phone_intent">tel:123070503</string>
+    <string name="restaurant3_phone">12 307 05 03</string>
+    <string name="restaurant3_address">Świętego Tomasza 25, 31&#8211;027 Kraków</string>
+
+    <string name="restaurant4_indicator">restaurant4</string>
+    <string name="restaurant4_title">Nago Sushi and Sake</string>
+    <string name="restaurant4_description_short">Best Sushi in Kraków</string>
+    <string name="restaurant4_description">Nago in Polish means naked. We call ourselves Nago because
         we want to share things that are natural no frills or embellishments. Taste amazing seafood.
         Fish of the best quality. Rice of the most noble strains. Local vegetables.
         Our secret is the art of bringing out the most subtle avours and balanced compositions. </string>
-    <string name="restaurant3_geo">geo:0,0?q=Nago+Sushi+Kraków</string>
-    <string name="restaurant3_web">http://www.nagosushiandsake.pl/</string>
-    <string name="restaurant3_phone_intent">tel:124293086</string>
-    <string name="restaurant3_phone">12 429 30 86</string>
-    <string name="restaurant3_address">Świętej Gertrudy 7, 31&#8211;046 Kraków</string>
-
-    <string name="restaurant4_indicator">restaurant4</string>
-    <string name="restaurant4_title">Cakester Cafe Kraków</string>
-    <string name="restaurant4_description_short">The healthiest sweets in Kraków</string>
-    <string name="restaurant4_description">No gluten, no sugar, no harmful additions. In their cakes
-    you will find only the best quality ingredients. Amazing taste and something good for your body.</string>
-    <string name="restaurant4_geo">geo:0,0?q=Cakester+Cafe+Kraków</string>
-    <string name="restaurant4_web">http://www.facebook.com/cakestercafekrakow/</string>
-    <string name="restaurant4_phone_intent">tel:123070503</string>
-    <string name="restaurant4_phone">12 307 05 03</string>
-    <string name="restaurant4_address">Świętego Tomasza 25, 31&#8211;027 Kraków</string>
+    <string name="restaurant4_geo">geo:0,0?q=Nago+Sushi+Kraków</string>
+    <string name="restaurant4_web">http://www.nagosushiandsake.pl/</string>
+    <string name="restaurant4_phone_intent">tel:124293086</string>
+    <string name="restaurant4_phone">12 429 30 86</string>
+    <string name="restaurant4_address">Świętej Gertrudy 7, 31&#8211;046 Kraków</string>
 
     <!--Pubs-->
     <string name="pub1_indicator">pub1</string>
