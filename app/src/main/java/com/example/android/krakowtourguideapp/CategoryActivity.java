@@ -120,7 +120,7 @@ public class CategoryActivity extends AppCompatActivity {
                 Log.v("CategoryActivity", "Switched to TodoFragment");
                 break;
             case R.id.nav_drawer_item_6:
-
+                contentFragment = new AboutFragment();
                 break;
             case R.id.nav_drawer_item_7:
 //                Create an intent to close an app

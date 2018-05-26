@@ -35,7 +35,7 @@
     <string name="tab_history">history</string>
     <string name="tab_info">info</string>
 
-    <!--Detail Activity Strings-->
+    <!--Detail Activity Placeholder Strings-->
     <string name="detail_title">Title of something</string>
     <string name="detail_description">This is something that will become something else when
         I put it here but I dont know when exactly yet.</string>
@@ -46,6 +46,21 @@
     <string name="detail_address">address</string>
     <string name="detail_phone">phone</string>
 
+    <!--About Fragment Strings-->
+    <string name="about_fragment_text">Project 5 - Tour Guide App
+        \n
+        \nAndroid Basics by Google Nanodegree Program
+        \n
+        \n Author: Anna Buczek
+        \n
+        \nAll of the information come from Wikipedia.
+        \n
+        \nAll of the photographs come with Creative Common Licence.
+        \n
+        \nSolutions and code based on knowledge obtained from Android Basics by Google Nanodegree
+        Program, StackOverflow answers and free tutorials.
+    </string>
+    
     <!--Home Fragment Strings-->
     <string name="home_fragment_overview"><b>KRAKÓW</b>
         \n
@@ -180,7 +195,7 @@
         Most foreign tourists came from Great Britain, followed by German, Italian, Portuguese,
         Spanish, Canadian and American visitors.
 </string>
-    
+
     <!--Attractions List resources-->
     <!--Top attractions-->
     <string name="top1_indicator">top1</string>
@@ -840,5 +855,8 @@
         of a King Krak, Krakus II and Lech II.</string>
     <string name="sight4_geo">geo:0,0?q=Wawel+Dragon+Kraków</string>
     <string name="sight4_address">Old Town, Kraków</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
