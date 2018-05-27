@@ -51,7 +51,7 @@ public class SightsFragment extends Fragment {
                 getString(R.string.sight4_geo), DETAIL_VIEW_2));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), sightsList);
+        attractionAdapter = new AttractionAdapter(getActivity(), sightsList, false);
 
     }
 

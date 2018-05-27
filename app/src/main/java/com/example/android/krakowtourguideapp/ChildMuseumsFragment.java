@@ -57,7 +57,7 @@ public class ChildMuseumsFragment extends Fragment {
                 getString(R.string.museum5_web), DETAIL_VIEW_1));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), museumsList);
+        attractionAdapter = new AttractionAdapter(getActivity(), museumsList, false);
 
     }
 

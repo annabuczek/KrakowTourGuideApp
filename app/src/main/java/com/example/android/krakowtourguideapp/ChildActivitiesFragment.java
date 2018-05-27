@@ -53,7 +53,7 @@ public class ChildActivitiesFragment extends Fragment {
                 getString(R.string.activity4_web), DETAIL_VIEW_1));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), activitiesList);
+        attractionAdapter = new AttractionAdapter(getActivity(), activitiesList, false);
 
     }
 

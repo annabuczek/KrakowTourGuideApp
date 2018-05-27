@@ -58,7 +58,7 @@ public class TopAttractionsFragment extends Fragment {
                 getString(R.string.top5_geo),DETAIL_VIEW_2));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), topAttractionsList);
+        attractionAdapter = new AttractionAdapter(getActivity(), topAttractionsList, false);
 
     }
 

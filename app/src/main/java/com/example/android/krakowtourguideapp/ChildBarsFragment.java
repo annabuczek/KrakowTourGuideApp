@@ -53,7 +53,7 @@ public class ChildBarsFragment extends Fragment {
                 getString(R.string.pub4_web), DETAIL_VIEW_1));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), barsList);
+        attractionAdapter = new AttractionAdapter(getActivity(), barsList, false);
 
     }
 

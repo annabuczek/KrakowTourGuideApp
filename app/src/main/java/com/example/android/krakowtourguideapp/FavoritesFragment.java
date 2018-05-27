@@ -40,7 +40,7 @@ public class FavoritesFragment extends Fragment {
         favoritesList = sharedPreference.getFavorites(getActivity());
 
 //        Create an instance of custom adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), favoritesList);
+        attractionAdapter = new AttractionAdapter(getActivity(), favoritesList, true);
 
     }
 

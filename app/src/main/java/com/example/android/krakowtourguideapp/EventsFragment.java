@@ -54,7 +54,7 @@ public class EventsFragment extends Fragment {
                 getString(R.string.event5_time), getString(R.string.event5_web), DETAIL_VIEW_3));
 
 //        Create instance of custom Adapter
-        attractionAdapter = new AttractionAdapter(getActivity(), eventsList);
+        attractionAdapter = new AttractionAdapter(getActivity(), eventsList, false);
 
     }
 
