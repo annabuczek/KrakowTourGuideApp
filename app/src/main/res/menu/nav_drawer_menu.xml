@@ -3,30 +3,37 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_drawer_item_1"
-            android:title="@string/nav_drawer_category_1" />
+            android:title="@string/nav_drawer_category_1"
+            android:icon="@drawable/ic_nav_menu_top"/>
         <item
             android:id="@+id/nav_drawer_item_2"
-            android:title="@string/nav_drawer_category_2" />
+            android:title="@string/nav_drawer_category_2"
+            android:icon="@drawable/ic_nav_menu_sight"/>
         <item
             android:id="@+id/nav_drawer_item_3"
-            android:title="@string/nav_drawer_category_3" />
+            android:title="@string/nav_drawer_category_3"
+            android:icon="@drawable/ic_nav_menu_fooddrink"/>
         <item
             android:id="@+id/nav_drawer_item_4"
-            android:title="@string/nav_drawer_category_4" />
+            android:title="@string/nav_drawer_category_4"
+            android:icon="@drawable/ic_nav_menu_event"/>
         <item
             android:id="@+id/nav_drawer_item_5"
-            android:title="@string/nav_drawer_category_5" />
+            android:title="@string/nav_drawer_category_5"
+            android:icon="@drawable/ic_nav_menu_todo"/>
     </group>
         <item android:title="@string/nav_drawer_sub_item">
             <menu>
                 <group android:checkableBehavior="single">
                 <item
                     android:title="@string/nav_drawer_category_about"
-                    android:id="@+id/nav_drawer_item_6"/>
+                    android:id="@+id/nav_drawer_item_6"
+                    android:icon="@drawable/ic_nav_menu_about"/>
 
                 <item
                     android:title="@string/nav_drawer_category_exit"
-                    android:id="@+id/nav_drawer_item_7"/>
+                    android:id="@+id/nav_drawer_item_7"
+                    android:icon="@drawable/ic_nav_menu_exit"/>
                 </group>
             </menu>
         </item>

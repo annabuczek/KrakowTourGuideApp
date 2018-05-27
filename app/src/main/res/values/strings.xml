@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Krakow Tour Guide App</string>
+    <string name="app_name">Kraków Tour Guide</string>
 
     <!--Launch Activity Strings-->
     <string name="launch_activity_heading">Krakow Tour Guide</string>
