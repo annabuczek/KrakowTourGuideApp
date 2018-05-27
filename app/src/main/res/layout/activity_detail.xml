@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:drawableTop="@drawable/ic_map"
-                    tools:text="@string/detail_button_map" />
+                    android:text="@string/detail_button_map" />
 
                 <Button
                     android:id="@+id/detail_button_web"
@@ -69,7 +69,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:drawableTop="@drawable/ic_web"
-                    tools:text="@string/detail_button_web" />
+                    android:text="@string/detail_button_web" />
 
                 <Button
                     android:id="@+id/detail_button_phone"
@@ -78,7 +78,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:drawableTop="@drawable/ic_phone"
-                    tools:text="@string/detail_button_phone" />
+                    android:text="@string/detail_button_phone" />
             </LinearLayout>
 
             <LinearLayout

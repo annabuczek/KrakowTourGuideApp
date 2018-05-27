@@ -15,6 +15,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
+import java.util.Set;
+
 public class CategoryActivity extends AppCompatActivity {
 
     private Toolbar categoryToolbar;
@@ -24,7 +26,8 @@ public class CategoryActivity extends AppCompatActivity {
     private NavigationView mNavigationView;
     private android.support.v4.app.Fragment contentFragment;
 
-    int navMenuItemId;
+    int navDrawerMenuItemId;
+    int bottomNavMenuItemPosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +51,12 @@ public class CategoryActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             contentFragment = new HomeFragment();
             replaceFragment(contentFragment);
-
         }
+//        else if (savedInstanceState != null) {
+//            menuItemId = savedInstanceState.getInt("MENU_ITEM_ID");
+//            mNavigationView.getMenu().findItem(menuItemId).setChecked(true);
+//            setTitle(mNavigationView.getMenu().findItem(menuItemId).getTitle());
+//        }
 
     }
 
@@ -96,52 +103,75 @@ public class CategoryActivity extends AppCompatActivity {
      */
     private void selectNavigationDrawerContent(MenuItem menuItem) {
 
-
+//      Get menuItem ID for further use
+        navDrawerMenuItemId = menuItem.getItemId();
         switch(menuItem.getItemId()) {
 //            Attach TopAttractionsFragment when menu item is selected by the user
             case R.id.nav_drawer_item_1:
+
+//                Update content fragment variable
                 contentFragment = new TopAttractionsFragment();
-                Log.v("CategoryActivity", "Switched to TopAttractionsFragment");
+//                Set Fragment as a content of selected menu item
+                replaceFragment(contentFragment);
+//                Set title of Action Bar as the name of MenuItem
+                setActionBarTitle(menuItem);
                 break;
+
             case R.id.nav_drawer_item_2:
+
+//                Update content fragment variable
                 contentFragment = new SightsFragment();
-                Log.v("CategoryActivity", "Switched to SightsFragment");
+//                Set Fragment as a content of selected menu item
+                replaceFragment(contentFragment);
+//                Set title of Action Bar as the name of MenuItem
+                setActionBarTitle(menuItem);
                 break;
+
             case R.id.nav_drawer_item_3:
+
+//                Update content fragment variable
                 contentFragment = new FoodDrinkFragment();
-                Log.v("CategoryActivity", "Switched to FoodDrinkFragment");
+//                Set Fragment as a content of selected menu item
+                replaceFragment(contentFragment);
+//                Set title of Action Bar as the name of MenuItem
+                setActionBarTitle(menuItem);
                 break;
+
             case R.id.nav_drawer_item_4:
+
+//                Update content fragment variable
                 contentFragment = new EventsFragment();
-                Log.v("CategoryActivity", "Switched to EventsFragment");
+//                Set Fragment as a content of selected menu item
+                replaceFragment(contentFragment);
+//                Set title of Action Bar as the name of MenuItem
+                setActionBarTitle(menuItem);
                 break;
+
             case R.id.nav_drawer_item_5:
+
+//                Update content fragment variable
                 contentFragment = new TodoFragment();
-                Log.v("CategoryActivity", "Switched to TodoFragment");
+//                Set Fragment as a content of selected menu item
+                replaceFragment(contentFragment);
+//                Set title of Action Bar as the name of MenuItem
+                setActionBarTitle(menuItem);
                 break;
+
             case R.id.nav_drawer_item_6:
+
+//                Update content fragment variable
                 contentFragment = new AboutFragment();
+//                Set Fragment as a content of selected menu item
+                replaceFragment(contentFragment);
+//                Set title of Action Bar as the name of MenuItem
+                setActionBarTitle(menuItem);
                 break;
+
             case R.id.nav_drawer_item_7:
-//                Create an intent to close an app
-                Intent ex = new Intent(Intent.ACTION_MAIN);
-                ex.addCategory(Intent.CATEGORY_HOME);
-                ex.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(ex);
-//                Finish current activity
+//              Finish current activity
                 finish();
                 break;
-            default:
-                contentFragment = new TopAttractionsFragment();
         }
-
-
-//        Set Fragment as a content of selected menu item
-            replaceFragment(contentFragment);
-//        Set title of Action Bar as the name of MenuItem
-            setActionBarTitle(menuItem);
-//            Get menu item ID for further use
-            navMenuItemId = menuItem.getItemId();
 
     }
 
@@ -151,14 +181,18 @@ public class CategoryActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.nav_bottom_item_1:
+
                         contentFragment = new HomeFragment();
+                        bottomNavMenuItemPosition = 0;
 //                        Remove highlight from Navigation Drawer Menu Item when HomeFragment is selected
-                        mNavigationView.getMenu().findItem(navMenuItemId).setChecked(false);
+                        mNavigationView.getMenu().findItem(navDrawerMenuItemId).setChecked(false);
                         break;
                     case R.id.nav_bottom_item_2:
+
+                        bottomNavMenuItemPosition = 1;
                         contentFragment = new FavoritesFragment();
 //                        Remove highlight from Navigation Drawer Menu Item when FavoriteFragment is selected
-                        mNavigationView.getMenu().findItem(navMenuItemId).setChecked(false);
+                        mNavigationView.getMenu().findItem(navDrawerMenuItemId).setChecked(false);
                         break;
 
                 }
@@ -190,5 +224,33 @@ public class CategoryActivity extends AppCompatActivity {
         setTitle(menuItem.getTitle());
 //      Close drawer when menu item is tapped
         mDrawerLayout.closeDrawers();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("MENU_ITEM_ID", navDrawerMenuItemId);
+
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        navDrawerMenuItemId = savedInstanceState.getInt("MENU_ITEM_ID");
+
+//        Check which is actual content Fragment
+        contentFragment = getSupportFragmentManager().findFragmentById(R.id.category_fragment_content_frame);
+//        Set title and highlight on navDrawer depending on current fragment
+        if (contentFragment instanceof HomeFragment) {
+            setTitle(bottomNavigationView.getMenu().getItem(0).getTitle());
+            mNavigationView.getMenu().findItem(navDrawerMenuItemId).setChecked(false);
+        } else if (contentFragment instanceof FavoritesFragment) {
+            mNavigationView.getMenu().findItem(navDrawerMenuItemId).setChecked(false);
+            setTitle(bottomNavigationView.getMenu().getItem(1).getTitle());
+        } else {
+            mNavigationView.getMenu().findItem(navDrawerMenuItemId).setChecked(true);
+            setTitle(mNavigationView.getMenu().findItem(navDrawerMenuItemId).getTitle());
+        }
     }
 }

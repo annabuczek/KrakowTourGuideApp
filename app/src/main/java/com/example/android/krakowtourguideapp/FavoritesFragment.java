@@ -1,5 +1,6 @@
 package com.example.android.krakowtourguideapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -7,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -19,6 +21,8 @@ import java.util.List;
 public class FavoritesFragment extends Fragment {
 
     public static final String FRAGMENT_ID = "favourites_fragment";
+    public final String DETAIL_VIEW_1 = "detail_view_full";
+    public final String DETAIL_VIEW_2 = "detail_view_less";
     SharedPreference sharedPreference;
     List<Attraction> favoritesList;
     private AttractionAdapter attractionAdapter;
@@ -32,21 +36,11 @@ public class FavoritesFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         sharedPreference = new SharedPreference();
+//        Get favorite list of objects from saved with shared preferences
         favoritesList = sharedPreference.getFavorites(getActivity());
 
+//        Create an instance of custom adapter
         attractionAdapter = new AttractionAdapter(getActivity(), favoritesList);
-
-////        Create ArrayList of objects
-//        ArrayList<Attraction> topAttractionsList= new ArrayList<Attraction>();
-//
-//        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-//        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-//        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-//        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-//        topAttractionsList.add(new Attraction("Wawel", "Kraków Castle", R.drawable.placeholder_card_view_image));
-
-//        Create instance of custom Adapter
-//        attractionAdapter = new AttractionAdapter(getActivity(), topAttractionsList);
 
     }
 
@@ -66,6 +60,33 @@ public class FavoritesFragment extends Fragment {
             ListView listView = view.findViewById(R.id.list_view);
 //        Set adapter to List View
             listView.setAdapter(attractionAdapter);
+
+            //Set OnListItemClickListener to open detail activity while tapping on the list item.
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Attraction selectedAttraction = favoritesList.get(position);
+
+                    Intent intent = new Intent(getActivity(), DetailActivity.class);
+                    intent.putExtra("ATTRACTION_IMG", selectedAttraction.getImage());
+                    intent.putExtra("ATTRACTION_TITLE", selectedAttraction.getTitle());
+                    intent.putExtra("ATTRACTION_DESCRIPTION", selectedAttraction.getDescription());
+                    intent.putExtra("ATTRACTION_ADDRESS", selectedAttraction.getAddress());
+                    intent.putExtra("DETAIL_VIEW", selectedAttraction.getDetailView());
+                    if (selectedAttraction.getDetailView().equalsIgnoreCase(DETAIL_VIEW_1)) {
+                        intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                        intent.putExtra("ATTRACTION_PHONE", selectedAttraction.getPhone());
+                        intent.putExtra("ATTRACTION_PHONE_INTENT", selectedAttraction.getPhoneIntent());
+                        intent.putExtra("ATTRACTION_WEB", selectedAttraction.getWebIntent());
+                    } else if (selectedAttraction.getDetailView().equalsIgnoreCase(DETAIL_VIEW_2)) {
+                        intent.putExtra("ATTRACTION_GEO", selectedAttraction.getGeoIntent());
+                    } else {
+                        intent.putExtra("ATTRACTION_WEB", selectedAttraction.getWebIntent());
+                        intent.putExtra("ATTRACTION_TIME", selectedAttraction.getTime());
+                    }
+                    startActivity(intent);
+                }
+            });
         }
     }
 }
